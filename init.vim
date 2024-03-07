@@ -31,7 +31,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Markdown
 Plug 'iamcco/markdown-preview.nvim'
 
-" Image Viewer
+" SFTP 
+Plug 'dcampos/nvim-sftp-sync', { 'do': ':UpdateRemotePlugins' }
+
+
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
@@ -99,6 +102,7 @@ let g:airline_symbols.linenr = ''
 
 
 " Colorscheme
+autocmd ColorScheme * highlight Comment ctermfg=blue guifg=#169ccd " Kommentar farbe"
 :colorscheme onedark
 hi Normal guibg=NONE ctermbg=NONE
 " Für den Hintergrund von Zeilennummern
@@ -109,6 +113,7 @@ hi VertSplit guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 " Für den matchbraket highlight
 hi MatchParen guibg=#ff00f7 ctermbg=NONE
+
 
 " For Syntax Highlighting
 lua << EOF
