@@ -112,7 +112,7 @@ hi VertSplit guibg=NONE ctermbg=NONE
 " Für den Hintergrund von Zeilen mit Warnungen/Fehlern
 hi SignColumn guibg=NONE ctermbg=NONE
 " Für den matchbraket highlight
-hi MatchParen guibg=#ff00f7 ctermbg=NONE
+hi MatchParen guibg=#ffffff ctermbg=NONE
 
 
 " For Syntax Highlighting
@@ -172,5 +172,13 @@ let g:mkdp_browser = 'chrome'
 let g:mkdp_filetypes = ['markdown', 'mkd', 'md']
 let g:mkdp_theme = 'dark'
 let g:mkdp_combine_preview = 0
+
+
+" Ctrl-Z für Undo
+nnoremap <C-z> u
+
+" Ctrl-Y für Redo
+nnoremap <C-y> <C-r>
+
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
