@@ -1,10 +1,15 @@
-:set number
-:set autoindent
-:set tabstop=4
-:set shiftwidth=4
-:set smarttab
-:set softtabstop=4
-:set mouse=a
+set number
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set mouse=a
+" Cursor
+set guicursor=n-v-c:block-Cursor
+set guicursor+=a:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=n:blinkwait10
 
 " scss to css compiler on save
 " autocmd BufWritePost *.scss if !isdirectory('%:p:h/css') | execute 'mkdir %:p:h/css' | endif
@@ -33,7 +38,6 @@ Plug 'iamcco/markdown-preview.nvim'
 
 " SFTP 
 Plug 'dcampos/nvim-sftp-sync', { 'do': ':UpdateRemotePlugins' }
-
 
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
@@ -112,7 +116,7 @@ hi VertSplit guibg=NONE ctermbg=NONE
 " Für den Hintergrund von Zeilen mit Warnungen/Fehlern
 hi SignColumn guibg=NONE ctermbg=NONE
 " Für den matchbraket highlight
-hi MatchParen guibg=#ffffff ctermbg=NONE
+hi MatchParen guibg=#4d4848 ctermbg=red
 
 
 " For Syntax Highlighting
